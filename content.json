@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "name": "Alex Khoo",
+    "nameCn": "Alex Khoo",
+    "title": { "en": "Founder & Digital Experience Director", "cn": "创始人 & 数字体验总监" },
+    "agency": "Jextures Sdn. Bhd.",
+    "tagline": { "en": "Crafting soulful digital experiences.", "cn": "打造有灵魂的数字体验。" }
+  },
+  "about": {
+    "location": { "en": "Seri Kembangan, originally from Klang", "cn": "居于Seri Kembangan，来自巴生" },
+    "age": { "en": "38 years old", "cn": "38 岁" },
+    "family": { "en": "Married, 1 kid (aged 7)", "cn": "已婚，育有一子（7 岁）" },
+    "intro": {
+      "en": "I'm a Digital Experience Director who believes brand perception is designed, not accidental. With more than 15 years of experience bridging logic and aesthetics, I build digital platforms that feel as premium as the brands they represent.",
+      "cn": "我是一位数字体验总监，深信品牌感知是设计出来的，而非偶然。凭借 15 年以上连接逻辑与美学的经验，我打造与品牌价值匹配的高端数字平台。"
+    },
+    "quote": { "en": "\"Design is my language. Logic is my tool.\"", "cn": "\"设计是我的语言，逻辑是我的工具\"" }
+  },
+  "hobbies": {
+    "sports": {
+      "title": { "en": "Court & Court", "cn": "球场与球场" },
+      "desc": { "en": "Precision, agility and team chemistry, shaped through badminton, basketball and pickleball.", "cn": "精准、敏捷与团队默契，在羽毛球、篮球与匹克球之间不断锤炼。" }
+    },
+    "travel": {
+      "title": { "en": "Wanderlust", "cn": "旅行探索" },
+      "desc": { "en": "Every destination reshapes how I observe people, behaviour, and space, and that naturally flows into how I build.", "cn": "每一个目的地，都拓宽了我设计的视野。" },
+      "photos": [
+        { "alt": "Travel 1", "placeholder": true },
+        { "alt": "Travel 2", "placeholder": true },
+        { "alt": "Travel 3", "placeholder": true },
+        { "alt": "Travel 4", "placeholder": true }
+      ]
+    },
+    "fengshui": {
+      "title": { "en": "Zi Wei Dou Shu, The Art of Destiny", "cn": "紫微斗数" },
+      "subtitle": { "en": "Certified Practitioner", "cn": "认证执业者" },
+      "desc": {
+        "en": "I study Zi Wei Dou Shu to understand energy and flow, principles that quietly shape how I structure UX.",
+        "cn": "将紫微斗数的古老智慧应用于理解能量流动, 同样的原理也引领着我的 UX 架构设计。"
+      }
+    }
+  },
+  "career": {
+    "sectionTitle": { "en": "The Journey", "cn": "我的历程" },
+    "milestones": [
+      {
+        "period": "2010 – 2013",
+        "role": { "en": "Full-Stack Developer", "cn": "全栈开发工程师" },
+        "company": "Freelance & Agencies",
+        "desc": {
+          "en": "Built a strong technical foundation with PHP, MySQL and WordPress, shaping how I approach systems today.",
+          "cn": "精通底层架构, PHP、MySQL、WordPress。奠定了支撑我今日创作的逻辑基础。"
+        },
+        "icon": "DEV"
+      },
+      {
+        "period": "2013 – 2018",
+        "role": { "en": "Property Manager & IT Consultant", "cn": "房地产经理兼 IT 顾问" },
+        "company": "Property Sector",
+        "desc": {
+          "en": "Built a Property Management System from scratch, solving real operational pain points through custom software.",
+          "cn": "从零打造业界闻名的物业管理系统, 用定制软件解决真实、高价值的业务痛点。"
+        },
+        "icon": "PMS"
+      },
+      {
+        "period": "2018 – 2019",
+        "role": { "en": "Homestay Business Owner", "cn": "民宿业务经营者" },
+        "company": "Servimax Sdn Bhd",
+        "desc": {
+          "en": "Built and ran a homestay business that grew to around 80 units before COVID-19 disrupted the model entirely.",
+          "cn": "打造并经营民宿业务, 高峰期约 80 个单位，后因 COVID-19 疫情冲击而失去整个商业模式与投入资金。"
+        },
+        "icon": "PR"
+      },
+      {
+        "period": "2019 – 2025",
+        "role": { "en": "Technical Team Lead", "cn": "技术团队主管" },
+        "company": "I Concept Digital",
+        "desc": {
+          "en": "Led programmers across full-stack delivery, architecture and integrations, translating business needs into scalable platforms across industries.",
+          "cn": "带领程序团队负责全栈交付、系统架构、整合与人才培养，将业务需求转化为可扩展的平台，并推动多个项目落地。"
+        },
+        "icon": "DEV"
+      },
+      {
+        "period": "2025 – Present",
+        "role": { "en": "Founder & Digital Experience Director", "cn": "创始人 & 数字体验总监" },
+        "company": "Jextures",
+        "desc": {
+          "en": "Blending 15 years of logic with UI/UX and premium motion design to elevate brands through designed perception.",
+          "cn": "将 15 年的逻辑经验与高端动效 UI/UX 融合, 通过「感官设计」提升品牌价值。"
+        },
+        "icon": "JX"
+      }
+    ]
+  },
+  "network": {
+    "sectionTitle": { "en": "My Network", "cn": "我的人脉网络" },
+    "desc": {
+      "en": "I specialise in digital experience, partnering with clients across:",
+      "cn": "我专注于数字体验, 以下是我的合作伙伴："
+    },
+    "nodes": [
+      { "id": "web", "label": { "en": "Website & App", "cn": "网站 & 应用" }, "icon": "WEB" },
+      { "id": "brand", "label": { "en": "Branding", "cn": "品牌设计" }, "icon": "BR" },
+      { "id": "property", "label": { "en": "Property", "cn": "房地产" }, "icon": "PR" },
+      { "id": "finance", "label": { "en": "Finance", "cn": "金融" }, "icon": "FIN" },
+      { "id": "edu", "label": { "en": "Education", "cn": "教育" }, "icon": "EDU" },
+      { "id": "health", "label": { "en": "Health & Wellness", "cn": "健康养生" }, "icon": "HW" },
+      { "id": "food", "label": { "en": "F&B", "cn": "餐饮" }, "icon": "FNB" },
+      { "id": "legal", "label": { "en": "Legal & Accounting", "cn": "法律 & 会计" }, "icon": "LEG" }
+    ]
+  },
+  "referral": {
+    "sectionTitle": { "en": "Ideal Referral", "cn": "推荐时机" },
+    "trigger": {
+      "en": "\"Our website looks outdated... it doesn't match our quality.\"",
+      "cn": "\"我们的网站看起来很过时，配不上我们的产品质量...\""
+    },
+    "cue": {
+      "en": "That's your cue. That's when you introduce Alex Khoo.",
+      "cn": "当你听到这句话，那正是推荐 Alex Khoo 的最佳时机。"
+    },
+    "signals": [
+      { "en": "Outdated website", "cn": "网站过时", "icon": "WEB" },
+      { "en": "Poor mobile experience", "cn": "手机体验差", "icon": "MOB" },
+      { "en": "No clear brand presence online", "cn": "缺乏线上品牌形象", "icon": "BR" },
+      { "en": "Low conversion or engagement", "cn": "转化率低", "icon": "DOWN" },
+      { "en": "Not sure where to begin", "cn": "不确定从哪里开始", "icon": "QN" }
+    ]
+  },
+  "slogan": {
+    "main": { "en": "Beauty is the baseline.\nUsability is the benchmark.", "cn": "好看只是基础\n好用才是标准" },
+    "sub": { "en": "Brand perception is intentional, not incidental.", "cn": "品牌感知是设计出来的，而非偶然。" }
+  },
+  "cta": {
+    "title": { "en": "Let's Build Something That Lasts", "cn": "让我们创造非凡" },
+    "desc": { "en": "Book a 121 (one-to-one) with Alex Khoo for a focused conversation about your brand's digital future.", "cn": "预约与 Alex 的一对一 (121) 会谈, 专注探讨你的品牌数字未来。" },
+    "button": { "en": "Book a 121", "cn": "预约一对一" },
+    "whatsapp": "https://wa.me/60102549899"
+  }
+}
