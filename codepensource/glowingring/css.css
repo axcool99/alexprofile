@@ -1,0 +1,46 @@
+body {
+	min-height: 100vh;
+	display: grid;
+	 background: #000 conic-gradient(
+      #fff1 0.25turn,
+      #0005 0.25turn 0.5turn,
+      #fff1 0.5turn 0.75turn,
+      #0005 0.75turn
+    )
+    top left / 2vmax 2vmax repeat;
+}
+
+.block { /* style for the :after overlay in prod */
+	width: 352px;
+	height: 352px;
+	place-self: center;
+	padding: 2px;
+	background: conic-gradient(
+		from var(--gradient-angle),
+		rgba(255, 255, 255, 0.1) 0deg,
+		rgba(255, 255, 255, 0.1) 60deg,
+		rgba(255, 255, 255, 0.9) 120deg,
+		rgba(255, 255, 255, 0.1) 180deg,
+		rgba(255, 255, 255, 0.1) 240deg,
+		rgba(255, 255, 255, 0.9) 300deg,
+		rgba(255, 255, 255, 0.1) 360deg
+	);
+	border-radius: 32px;
+	mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+	animation: loading 4s linear infinite;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes loading {
+	0% {
+		--gradient-angle: 0deg;
+	}
+	100% {
+		--gradient-angle: 360deg;
+	}
+}

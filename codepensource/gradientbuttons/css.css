@@ -1,0 +1,163 @@
+@property --button-fill {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+@property --button-fill-stop {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --rg-1-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --rg-1-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --rg-2-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 20%;
+}
+
+@property --rg-2-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 70%;
+}
+
+@property --rg-3-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 70%;
+}
+
+@property --rg-3-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 20%;
+}
+
+@property --rg-4-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --rg-4-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+.gradient-button {
+  padding: 0.5lh 4ch;
+  border-radius: 100vw;
+  border: 5px solid transparent;
+  transition: --button-fill 1s, --button-fill-stop 0.5s;
+  animation: gradient-movement 5s alternate infinite ease-in-out;
+  animation-delay: calc(sibling-index() * -2000ms);
+  background: radial-gradient(
+        circle,
+        var(--button-fill) var(--button-fill-stop),
+        transparent
+      )
+      padding-box,
+    radial-gradient(
+        circle 120px at var(--rg-1-x) var(--rg-1-y),
+        deeppink,
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 150px at var(--rg-2-x) var(--rg-2-y),
+        royalblue,
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 160px at var(--rg-3-x) var(--rg-3-y),
+        rebeccapurple,
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 200px at var(--rg-4-x) var(--rg-4-y),
+        lime,
+        transparent
+      )
+      border-box;
+
+  background-position: center, center, bottom right, top left, top right,
+    bottom left;
+
+  background-repeat: no-repeat;
+}
+
+@keyframes gradient-movement {
+  30% {
+    --rg-1-x: 70%;
+    --rg-1-y: 20%;
+  }
+
+  40% {
+    --rg-2-x: 120%;
+    --rg-2-y: 50%;
+  }
+  45% {
+    --rg-4-x: -10%;
+    --rg-4-y: 10%;
+  }
+  50% {
+    --rg-3-x: 50%;
+    --rg-3-y: 50%;
+  }
+
+  70% {
+    --rg-1-x: -10%;
+    --rg-2-y: -20%;
+  }
+}
+
+.gradient-button:hover,
+.gradient-button:focus-visible {
+  --button-fill-stop: 100%;
+  --button-fill: var(--button-fill-hover, black);
+}
+
+.gradient-button.bordered {
+  --button-fill-stop: 100%;
+  --button-fill: black;
+}
+
+.gradient-button.bordered:is(:hover, :focus-visible) {
+  --button-fill-stop: 0%;
+  --button-fill: transparent;
+}
+
+html {
+  font-family: system-ui;
+  color-scheme: dark;
+  font-size: 2rem;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100vb;
+  display: grid;
+  grid-template-columns: auto auto;
+  place-content: center;
+  gap: 1rem;
+}
+
+button {
+  font: inherit;
+}

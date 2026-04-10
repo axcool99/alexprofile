@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-f07739098a39bd4e74ddd974652dac904146f33fdc1ecab356e8c809a05faccb.js"></script>
+
+
+  <title>Living Palette System</title>
+
+    <link rel="canonical" href="https://codepen.io/grauconejo13/pen/pvbqRed">
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&amp;display=swap'>
+  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --c1: #000;
+  --c2: #111;
+  --c3: #222;
+  --c4: #333;
+  --c5: #444;
+  --c6: #555;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--c1);
+  color: var(--c5);
+  min-height: 100vh;
+  overflow: hidden;
+  transition: background 0.8s ease;
+}
+
+/* Palette Name */
+h1 {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Swatches */
+.swatches {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.swatch {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  transition: background 0.8s ease;
+}
+
+/* Controls */
+.controls {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+button {
+  font-family: inherit;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--c6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button.primary {
+  background: var(--c4);
+  color: var(--c1);
+  border: none;
+}
+
+button.locked {
+  background: var(--c2);
+  color: var(--c6);
+}
+
+/* Kaleidoscope Background */
+.kaleidoscope {
+  position: fixed;
+  inset: 0;
+  background: conic-gradient(
+    from 0deg,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c4),
+    var(--c5),
+    var(--c6),
+    var(--c1)
+  );
+  animation: spin 25s linear infinite;
+  filter: blur(80px) saturate(130%);
+  z-index: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile Fine-Tuning */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1rem;
+    top: 50px;
+  }
+
+  .swatch {
+    width: 36px;
+    height: 36px;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
+  .kaleidoscope {
+    filter: blur(60px) saturate(120%);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .kaleidoscope {
+    animation: none;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <h1 id="paletteName"></h1>
+
+<div class="swatches"></div>
+
+<div class="controls">
+  <button id="nextBtn" class="primary">Next</button>
+  <button id="lockBtn">Lock</button>
+</div>
+
+<div class="kaleidoscope"></div>
+
+<!--
+A dynamic kaleidoscope built from hand-selected color palettes.
+This Pen explores how motion, symmetry, and intentional color systems can coexist without sacrificing harmony or accessibility.
+Built for #CodePenChallenge: Color Palettes.
+-->
+  
+    <script id="rendered-js" >
+const palettes = [
+{
+  name: "Horizon Shift",
+  colors: ["#0B132B", "#1C2541", "#3A506B", "#5BC0BE", "#F4F4F4", "#FF6B6B"] },
+
+{
+  name: "Quiet Voltage",
+  colors: ["#1A1A1D", "#4E4E50", "#6F2232", "#950740", "#C3073F", "#EAEAEA"] },
+
+{
+  name: "Filtered Reality",
+  colors: ["#1F1D36", "#3F3351", "#864879", "#E9A6A6", "#F0F0F0", "#2E2E2E"] },
+
+{
+  name: "Desert Bloom",
+  colors: ["#3E2723", "#6D4C41", "#D7CCC8", "#FFAB91", "#FF7043", "#FFF3E0"] },
+
+{
+  name: "Cosmic Ink",
+  colors: ["#0F0F1B", "#1B1B2F", "#16213E", "#533483", "#E94560", "#F5F5F5"] }];
+
+
+
+let current = 0;
+let locked = false;
+
+const swatchContainer = document.querySelector(".swatches");
+const nameEl = document.getElementById("paletteName");
+
+function applyPalette(index) {
+  const palette = palettes[index];
+  nameEl.textContent = palette.name;
+
+  palette.colors.forEach((color, i) => {
+    document.documentElement.style.setProperty(`--c${i + 1}`, color);
+  });
+
+  swatchContainer.innerHTML = "";
+  palette.colors.forEach(color => {
+    const div = document.createElement("div");
+    div.className = "swatch";
+    div.style.background = color;
+    swatchContainer.appendChild(div);
+  });
+}
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  if (locked) return;
+  current = (current + 1) % palettes.length;
+  applyPalette(current);
+});
+
+document.getElementById("lockBtn").addEventListener("click", () => {
+  locked = !locked;
+  const btn = document.getElementById("lockBtn");
+  btn.classList.toggle("locked", locked);
+  btn.textContent = locked ? "Locked" : "Lock";
+});
+
+applyPalette(current);
+//# sourceURL=pen.js
+  </script>
+
+  
+</body>
+
+</html>
