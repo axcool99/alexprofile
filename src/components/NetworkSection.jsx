@@ -5,7 +5,6 @@ import LineIcon from './LineIcon'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Position a node around a circle
 function orbitPosition(index, total, radius) {
   const angle = (index / total) * Math.PI * 2 - Math.PI / 2
   return {
@@ -13,6 +12,17 @@ function orbitPosition(index, total, radius) {
     y: Math.sin(angle) * radius,
   }
 }
+
+const DESKTOP_NODE_OFFSETS = [
+  { x: 0, y: -296 },
+  { x: 228, y: -214 },
+  { x: 292, y: 0 },
+  { x: 228, y: 214 },
+  { x: 0, y: 296 },
+  { x: -228, y: 214 },
+  { x: -292, y: 0 },
+  { x: -228, y: -214 },
+]
 
 export default function NetworkSection({ lang, content }) {
   const sectionRef = useRef(null)
@@ -106,13 +116,13 @@ export default function NetworkSection({ lang, content }) {
 
   const isCn = lang === 'cn'
   const { nodes, sectionTitle, desc } = content.network
-  const RADIUS = 290
+  const RADIUS = 250
 
   return (
     <section id="network" ref={sectionRef} className="section-base" style={{ background: 'var(--bg)' }}>
       <div className="max-container">
         {/* Header */}
-        <div ref={headRef} style={{ textAlign: 'center', marginBottom: '5rem', opacity: 0 }}>
+        <div ref={headRef} style={{ textAlign: 'center', marginBottom: '3.5rem', opacity: 0 }}>
           <p className="text-label" style={{ marginBottom: '1rem' }}>
             {isCn ? '跨界连接' : 'Industries'}
           </p>
@@ -153,7 +163,7 @@ export default function NetworkSection({ lang, content }) {
             }}
           >
             {nodes.map((node, i) => {
-              const pos = orbitPosition(i, nodes.length, RADIUS)
+              const pos = DESKTOP_NODE_OFFSETS[i] || orbitPosition(i, nodes.length, RADIUS)
               return (
                 <line
                   key={node.id}
@@ -175,7 +185,7 @@ export default function NetworkSection({ lang, content }) {
                   Alex
                 </div>
                 <div style={{ fontSize: '0.62rem', letterSpacing: '0.18em', opacity: 0.78, textTransform: 'uppercase' }}>
-                  Digital Network
+                  Network
                 </div>
               </div>
             </div>
@@ -183,7 +193,7 @@ export default function NetworkSection({ lang, content }) {
 
           {/* Orbit nodes */}
           {nodes.map((node, i) => {
-            const pos = orbitPosition(i, nodes.length, RADIUS)
+            const pos = DESKTOP_NODE_OFFSETS[i] || orbitPosition(i, nodes.length, RADIUS)
             return (
               <div
                 key={node.id}

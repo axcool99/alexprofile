@@ -64,16 +64,6 @@
         "icon": "PMS"
       },
       {
-        "period": "2018 – 2019",
-        "role": { "en": "Homestay Business Owner", "cn": "民宿业务经营者" },
-        "company": "Servimax Sdn Bhd",
-        "desc": {
-          "en": "Built and ran a homestay business that grew to around 80 units before COVID-19 disrupted the model entirely.",
-          "cn": "打造并经营民宿业务, 高峰期约 80 个单位，后因 COVID-19 疫情冲击而失去整个商业模式与投入资金。"
-        },
-        "icon": "PR"
-      },
-      {
         "period": "2019 – 2025",
         "role": { "en": "Technical Team Lead", "cn": "技术团队主管" },
         "company": "I Concept Digital",
@@ -95,8 +85,78 @@
       }
     ]
   },
+  "gains": {
+    "sectionTitle": { "en": "GAINS", "cn": "GAINS" },
+    "items": [
+      {
+        "key": "G",
+        "name": { "en": "Goals", "cn": "目标" },
+        "summary": {
+          "en": "Help local brands move away from cheap template looks.",
+          "cn": "短期目标： 在未来一年，协助 20 个本土品牌告别“廉价模板感”，用国际水准的数字体验（Digital Experience）重塑品牌身价。"
+        },
+        "points": [
+          { "en": "Short term: help 20 local brands reshape their value with international-level digital experience this year.", "cn": "短期目标： 在未来一年，协助 20 个本土品牌告别“廉价模板感”，用国际水准的数字体验（Digital Experience）重塑品牌身价。" },
+          { "en": "Long term: lead Jextures to become known for high-end custom work.", "cn": "长期目标： 带领 Jextures 团队成为行业内“高端定制化”的代名词，用设计与架构实力提升大马企业的国际竞争力。" }
+        ]
+      },
+      {
+        "key": "A",
+        "name": { "en": "Accomplishments", "cn": "成就" },
+        "summary": {
+          "en": "Self-taught since 2011, with 15 years in web development.",
+          "cn": "2011 年自学入行，深耕 15 年，现已能自如驾驭任何复杂的网站架构"
+        },
+        "points": [
+          { "en": "Built a complex Property Management System (PMS) by myself while working as a property salesperson.", "cn": "在房地产行业担任业务员期间，凭一己之力开发了一套复杂的物业管理系统 (PMS)" },
+          { "en": "Started self-learning in 2011 and have worked in this field for 15 years.", "cn": "2011 年自学入行，深耕 15 年，现已能自如驾驭任何复杂的网站架构" }
+        ]
+      },
+      {
+        "key": "I",
+        "name": { "en": "Interests", "cn": "兴趣" },
+        "summary": {
+          "en": "Sports, travel, Feng Shui, and AI.",
+          "cn": "球类运动"
+        },
+        "points": [
+          { "en": "Ball sports", "cn": "球类运动" },
+          { "en": "Travel", "cn": "旅行" },
+          { "en": "Feng Shui", "cn": "风水" },
+          { "en": "AI-related topics", "cn": "AI相关课题" }
+        ]
+      },
+      {
+        "key": "N",
+        "name": { "en": "Networks", "cn": "人脉" },
+        "summary": {
+          "en": "Proptech, education, I-Kuan Tao, and Feng Shui networks.",
+          "cn": "Malaysia Proptech Association (马来西亚房地产科技协会) 成员。"
+        },
+        "points": [
+          { "en": "Member of Malaysia Proptech Association", "cn": "Malaysia Proptech Association (马来西亚房地产科技协会) 成员" },
+          { "en": "DCode education", "cn": "DCode 全人教育 " },
+          { "en": "I-Kuan Tao", "cn": "一贯道" },
+          { "en": "Feng Shui masters from different schools", "cn": "各门派风水大师" }
+        ]
+      },
+      {
+        "key": "S",
+        "name": { "en": "Skills", "cn": "技能" },
+        "summary": {
+          "en": "Logic, design, code, and detail.",
+          "cn": "凌晨才是效率巅峰"
+        },
+        "points": [
+          { "en": "Most efficient after midnight", "cn": "凌晨才是效率巅峰" },
+          { "en": "Obsessive about 1px details", "cn": "1px 执着狂" },
+          { "en": "The art of balancing logic, design, and code", "cn": "懂逻辑、懂设计、懂代码" }
+        ]
+      }
+    ]
+  },
   "network": {
-    "sectionTitle": { "en": "My Network", "cn": "我的人脉网络" },
+    "sectionTitle": { "en": "Contact Sphere", "cn": "业务人脉圈" },
     "desc": {
       "en": "I specialise in digital experience, partnering with clients across:",
       "cn": "我专注于数字体验, 以下是我的合作伙伴："

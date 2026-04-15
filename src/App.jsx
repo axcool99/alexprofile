@@ -12,6 +12,7 @@ import SportScene from './components/SportScene'
 import TravelSection from './components/TravelSection'
 import FengShuiSection from './components/FengShuiSection'
 import CareerTimeline from './components/CareerTimeline'
+import GainsSection from './components/GainsSection'
 import NetworkSection from './components/NetworkSection'
 import ReferralSection from './components/ReferralSection'
 import SloganSection from './components/SloganSection'
@@ -62,6 +63,7 @@ export default function App() {
         <TravelSection lang={lang} content={content} />
         <FengShuiSection lang={lang} content={content} />
         <CareerTimeline lang={lang} content={content} />
+        <GainsSection lang={lang} content={content} />
         <NetworkSection lang={lang} content={content} />
         <ReferralSection lang={lang} content={content} />
         <SloganSection lang={lang} content={content} />
